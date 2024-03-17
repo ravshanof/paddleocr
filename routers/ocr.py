@@ -9,7 +9,7 @@ import requests
 
 router = APIRouter(prefix="/ocr", tags=["OCR"])
 
-ocr = PaddleOCR(use_angle_cls=True, lang="ch")
+ocr = PaddleOCR(use_angle_cls=True, lang="en")
 
 
 @router.get('/predict-by-path', response_model=RestfulModel, summary="识别本地图片")
